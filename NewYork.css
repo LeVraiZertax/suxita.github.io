@@ -1,121 +1,77 @@
-<!DOCTYPE html>
-<html>
+h1
+{
+color: rgb(255, 0, 212);
+font-size: 3em;
+border: 5px rgb(255, 0, 212) solid;
+text-align: center;
+border-radius:12px;
+box-shadow: 1px 1px 20px black;
+margin-left: 300px;  /* vers la gauche */
+margin-right: 300px; /* je décalle un élément vers la droite*/
+}
+h2
+{
+  text-align: center;
+  color: blue;
+  border: 5px black solid;
+  margin-left: 400px;
+  margin-right: 400px;
+}
 
-<head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="NewYork.css" />
-    <title>NewYork et les points clefs</title>
-</head>
-
-<body>
-    <h1 id="monTitre">Voyage à New York</h1>
-    <div>
-        <!-- Bouton couleur rouge-->
-        <button class="but" id="testEvent">Titre en rouge</button> <!--id du bouton + nom du bouton-->
-        <!--bouton couleur bleu-->
-        <button class="but" id="Event">Titre en bleu</button> <!--id du bouton + nom du bouton-->
-    </div>
-
-
-
-</br>
-    <p class="présentation"> Bonjour, aujourd'hui je vais vous parlez de mon voyage a New York.
-        Pendant ce voyage, j'ai put visiter de nombreux monument comme La Statue de la liberté ou l'empire states
-        building.
-        Vous pouvez en apprendre plus sur NYC grâce à <a href=https://fr.wikipedia.org/wiki/New_York>ce lien</a>.
-    
-        <h2>Les endroits clefs à absolument visiter</h2>
-
-        <ol style="text-align: center;">
-         <li><a href="https://fr.wikipedia.org/wiki/High_Line">La High Line</a></li>
-         <img src="https://myfrenchcity.com/wp-content/uploads/2016/04/The-High-Line-Park-New-York-Stock-Photo-300x200.jpg">
-         <li><a href="https://fr.wikipedia.org/wiki/Statue_de_la_Libert%C3%A9">La statue de la liberté</a></li>
-         <img src="https://petitfute.twic.pics/medias/membre/avis/900_600/d1/dd/5da04b4851047.jpg?twic=v1/resize=300x200">
-         <li><a href="https://www.newyorkcity.fr/central-park-new-york/">Central Park</a></li>
-         <img src="https://images.salaun-holidays.com/(vignette)-Vignette-Etats-Unis-New-York-Central-Park-66-it_77548217-09032017.jpg">
-         <li><a href="https://www.newyorkcity.fr/times-square-new-york/">Times Square</a></li>
-         <img src="https://i.ebayimg.com/images/g/D1sAAOSwo0JWGtIq/s-l300.jpg">
-         <li><a href="https://fr.wikipedia.org/wiki/Broadway">Broadway</a></li>
-         <img src="77.jpg">
-        </ol>
-        <p>_____________________________________________________________________________________________________________________________________________________________________</p></br>
-        <p>_____________________________________________________________________________________________________________________________________________________________________</p>
-        <h2>D'autres photos de New York</h2>
-        <div style="text-align: center;">
-            <button class="riko" id="Back"><-- Précédent</button>
-            <img src="" id="imagedefil" class="imagedefile">
-            <button class="riko" id="Next">Suivant --></button>
-        </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    </p>
-    <script> 
-        document.getElementById('testEvent').addEventListener('click', function () {  /* id du bouton + événement au click */
-        var monTitreRouge = document.getElementById('monTitre');
-        monTitreRouge.style.color = 'red';
-        monTitreRouge.style.borderColor= 'red' }); /* fonction du bouton | ex : alerte , changement de couleurs */
-        
-        document.getElementById('Event').addEventListener('click', function () {  
-        var monTitreBleu= document.getElementById('monTitre');
-        monTitreBleu.style.color = 'blue';
-        monTitreBleu.style.borderColor= 'blue' });
-         
-        let listeEleve = [
-            'https://larevue.squirepattonboggs.com/wp-content/uploads/sites/35/2020/12/New-York-city-skyline-day.jpg',
-            'https://www.geek-generation.fr/files/2018/08/new-york-vue-du-ciel-300x200.jpg',
-            'https://images.salaun-holidays.com/(vignette)-Vignette-Etats-Unis-New-York-Manhattan-12-it_43932564-09032017.jpg',
-            'https://i.ebayimg.com/images/g/abQAAOSwuWVWFSzA/s-l300.jpg',
-            'http://voyageur-attitude.fr/wp-content/uploads/2013/01/amerique-du-nord-etats-unis-new-york-city-times-square-300x200.jpg',
-            'https://www.mademoiselle-voyage.fr/wp-content/uploads/2019/02/new-york-mademoiselle-voyage-300x200.jpg',
-            'https://images.hugh.voyage/(vignette)-Vignette-Etats-Unis-New-York-Drapeau-Statue-Liberte-31-it_28753162-09032017.jpg',
-            'https://www.new-york-city.fr/wp-content/uploads/2020/12/union-sqaure-nyc-300x200.jpg',
-        ];
-        
-
-        var index = 0;
-        document.getElementById('imagedefil').src = listeEleve[index];
-        document.getElementById('Next').addEventListener('click', function () {
-            index = index + 1;
-            if (index > listeEleve.length - 1) { 
-                index=0;
-            }
-            console.log("Next",index);
-            document.getElementById('imagedefil').src = listeEleve[index];
-        });
-
-        
-        document.getElementById('Back').addEventListener('click', function () {
-           
-            index = index - 1;
-            if ( index < 0 ){ 
-                index=listeEleve.length - 1;
-            }
-            console.log("Back",index);
-
-            document.getElementById('imagedefil').src = listeEleve[index];
-        });
+.présentation
+{
+  font-size: 25px;;
+}
 
 
-    </script>
+body
+{
+ background-image: url("background White stiled.jpg");
+ background-attachment: fixed;
+ padding: 100px;
+}
+
+a:hover /* apparence au survol des liens */
+{
+    text-decoration:underline;
+    color: red;
+}
+
+a:active /* Quand le visiteur clique sur le lien */
+{
+  background-color: violet;
+}
+
+li{
+  font-size:xx-large;
+  padding-right: 1000px;
+}
+
+#Event{
+  color:blue;
+  border: 4px blue solid;
+  border-radius: 20px;
+}
+
+#testEvent{
+  color: red;
+  border:4px red solid ;
+  border-radius: 20px;
+}
+.riko{
+border:5px black solid;
+color: white;
+font-size: x-large;
+border-radius: 10px;
+}
+
+#Back{
+  background-color: red;
+}
+#Next{
+  background-color: blue;
+}
 
 
 
 
-
-
-
-
-</body>
-
-</html>
